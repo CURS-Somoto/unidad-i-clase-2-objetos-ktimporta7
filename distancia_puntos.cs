@@ -2,18 +2,18 @@ using System;
 
 class Punto
 {
-    public decimal x { get; set; }
-    public decimal y { get; set; }
+    public decimal X { get; set; }
+    public decimal Y { get; set; }
 
     public Punto(decimal x, decimal y)
     {
-        this.x = x;
-        this.y = y;
+        X = x;
+        Y = y;
     }
 
     public double MedirDistancia(Punto puntoDestino)
     {
-        double distancia = Math.Sqrt(Math.Pow((double)(puntoDestino.x - this.x), 2) + Math.Pow((double)(puntoDestino.y - this.y), 2));
+        double distancia = Math.Sqrt(Math.Pow((double)(puntoDestino.X - this.X), 2) + Math.Pow((double)(puntoDestino.Y - this.Y), 2));
         return distancia;
     }
 }
@@ -27,6 +27,6 @@ class Program
 
         double distancia = puntoOrigen.MedirDistancia(puntoDestino);
 
-        Console.WriteLine($"La distancia entre dos puntos es: {distancia}");
+        Console.WriteLine($"La distancia que hay entre los dos puntos es: {distancia}");
     }
 }
